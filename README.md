@@ -5,7 +5,7 @@ An AI-powered decision-support dashboard for real estate developers to identify 
 
 ## App Deployment URL
 
-[YOUR_DEPLOYED_URL_HERE] *(e.g., https://roommate-analyzer.streamlit.app)*
+https://student-housing-strategy-ai-svmnxknds9kudfgodtrgey.streamlit.app
 
 ## Local Setup Instructions
 
