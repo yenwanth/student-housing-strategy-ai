@@ -13,7 +13,7 @@ Ensure you have [uv](https://github.com/astral-sh/uv) installed on your machine.
 
 ```bash
 # 1. Clone the repository
-git clone [your-repository-url]
+git clone https://github.com/yenwanth/student-housing-strategy-ai
 
 # 2. Navigate to the project folder
 cd code
