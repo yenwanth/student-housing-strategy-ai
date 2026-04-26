@@ -76,9 +76,15 @@ st.markdown("""
 # ==========================================
 
 @st.cache_data
-def load_and_clean_data(file_path):
+def load_and_clean_data(file_name):
+    # Use relative path so it works on GitHub and Streamlit Cloud
     try:
-        df_raw = pd.read_excel(file_path)
+        # Check if the file exists in the current directory
+        if not os.path.exists(file_name):
+            st.error(f"Dataset file '{file_name}' not found in the project directory.")
+            return pd.DataFrame()
+            
+        df_raw = pd.read_excel(file_name)
     except Exception as e:
         st.error(f"Error loading Excel file: {e}")
         return pd.DataFrame()
@@ -299,7 +305,7 @@ def render_scenario_simulator(df):
 
 def main():
     st.sidebar.title("🎛️ Analysis Controls")
-    data = load_and_clean_data("d:/VA/project/fy2026_safmrs.xlsx")
+    data = load_and_clean_data("fy2026_safmrs.xlsx")
     if data.empty: return
     
     df = calculate_shpi(data)
