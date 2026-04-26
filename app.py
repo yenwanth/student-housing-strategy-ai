@@ -10,7 +10,7 @@ import os
 # ==========================================
 # 1. PAGE CONFIG & STYLING
 # ==========================================
-st.set_page_config(page_title="Team 11 | AI Market Advisor", layout="wide", page_icon="🏢")
+st.set_page_config(page_title="AI Market Advisor", layout="wide", page_icon="🏢")
 
 # Securely load the OpenAI API Key from Streamlit Secrets or Environment Variables
 api_key = st.secrets.get("OPENAI_API_KEY") or os.getenv("OPENAI_API_KEY")
